@@ -1,11 +1,15 @@
 {
   "id": "com.double",
   "name": "multiWIndow",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "host": [
     {
       "app": "PS",
-      "minVersion": "23.0.0"
+      "minVersion": "24.0.0"
+    },
+    {
+      "app": "ID",
+      "minVersion": "19.0.0"
     }
   ],
   "main": "index.html",
@@ -63,6 +67,30 @@
     "id": "third",
     "label": {
       "default": "third window"
+    },
+    "minimumSize": {
+      "width": 120,
+      "height": 140
+    },
+    "maximumSize": {
+      "width": 1200,
+      "height": 10000
+    },
+    "preferredDockedSize": {
+      "width": 150,
+      "height": 200
+    },
+    "preferredFloatingSize": {
+      "width": 300,
+      "height": 200
+    
+    }
+  },
+  {
+    "type": "panel",
+    "id": "fourth",
+    "label": {
+      "default": "fourth window"
     },
     "minimumSize": {
       "width": 120,

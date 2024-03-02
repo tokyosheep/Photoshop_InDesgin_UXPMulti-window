@@ -68,6 +68,11 @@ entrypoints.setup({
              */
             show(event){
                 console.log("first", event);
+                const target_panel = document.getElementById("target_panel");
+                console.log(target_panel);
+                const title = document.createElement("h2");
+                title.textContent = "title";
+                target_panel.appendChild(title);
                 const element = createBase(event,"first");
                 const messageBox = createTextBox(element.container,"message");
                 const button = createButton(element.container,"btn");
@@ -98,6 +103,12 @@ entrypoints.setup({
                 textElm.textContent = 'added from third panel scope.';
                 textElm.className = 'text';
                 document.body.appendChild(textElm);
+            }
+        },
+        fourth: {
+            show (event) {
+                console.log("four", event);
+                
             }
         }
     }
