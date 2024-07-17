@@ -19,8 +19,8 @@ see more detaills on this example.
 
 ## Note
 
-on InDesign, you must open opnels from plugin panel. 
-select from top of menu, then open panels you'll see same contents on all of panels.
+on InDesign, you must open panels from the "plugin panel". you should not open the panel from top of the menu. 
+select from top of the menu, then open panels display same contents on all of panels.
 
 ![from menu](./readmeimg/fromMenu.png)
 
