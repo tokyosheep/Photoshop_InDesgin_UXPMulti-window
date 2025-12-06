@@ -1,5 +1,6 @@
 # Example of Photoshop and InDesign UXP Plugin that shows how to develop multi-panel with Vanilla JS
 
+
 developing multi-UXP-Panel with Vanilla JS is bit tricky.
 so I show you how to develop it.
 

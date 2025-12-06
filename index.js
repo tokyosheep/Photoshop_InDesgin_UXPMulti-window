@@ -1,11 +1,29 @@
 const { entrypoints } = require("uxp");
 
+const TEXT_CLASS = "text";
+
+
+
+/**
+ * obtaining current theme and listening theme change event.
+ */
+const init = () => {
+    const initTheme = document.theme.getCurrent();
+    document.getElementById("interface").textContent = `Current theme: ${initTheme}`;
+    document.theme.onUpdated.addListener((event) => {
+        console.log("theme updated:", event);
+        document.getElementById("interface").textContent = `Current theme: ${event}`;
+    });
+}
+init ();
+
 // these methods just create HTML element. 
 
 const createBase = (elm,titleText) =>{
     const container = document.createElement("div");
     const title = document.createElement("h1");
     title.textContent = titleText;
+    title.classList.add(TEXT_CLASS);
     container.appendChild(title);
     elm.appendChild(container);
     return {container:container,title:title};
@@ -31,7 +49,7 @@ const createButton = (base,id,text="button") =>{
 class Connection{
     constructor(){
         this.elm = document.createElement("h2");
-        this.elm.classList.add("text");
+        this.elm.classList.add(TEXT_CLASS);
     }
 
     setElm(base){
@@ -71,6 +89,7 @@ entrypoints.setup({
                 const target_panel = document.getElementById("target_panel");
                 console.log(target_panel);
                 const title = document.createElement("h2");
+                title.classList.add(TEXT_CLASS);
                 title.textContent = "title";
                 target_panel.appendChild(title);
                 const element = createBase(event,"first");
@@ -101,7 +120,7 @@ entrypoints.setup({
                  */
                 const textElm = document.createElement('p');
                 textElm.textContent = 'added from third panel scope.';
-                textElm.className = 'text';
+                textElm.classList.add(TEXT_CLASS);
                 document.body.appendChild(textElm);
             }
         },

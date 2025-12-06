@@ -19,17 +19,20 @@
   }
 
   .text{
-    color: #fff;
+    color: var(--uxp-host-text-color);
   }
 
 </style>
 <body>
-  <h1>Hello</h1> <!-- this h1 tag'll be displayed on  only first panel' -->
+  <h1 class="text">Hello</h1> <!-- this h1 tag'll be displayed on  only first panel' -->
   <!-- inside of uxp-panel can be displaed only on third panel.-->
   <uxp-panel panelid="third">
-    <h1>third panel</h1>
+    <h1 class="text">third panel</h1>
+    <p id="interface" class="text"></p>
     <button type="button">push</button>
   </uxp-panel>
-  <uxp-panel panelid="fourth" id="target_panel"></uxp-panel>
+  <uxp-panel panelid="fourth" id="target_panel">
+    <p class="text">text</p>
+  </uxp-panel>
 </body>
 </html>
