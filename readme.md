@@ -29,7 +29,16 @@ select from plugin panel, it shows contents properly.
 
 ![from plugin panel](./readmeimg/fromPluginPanel.png)
 
-I checked on InDesign 19.2. I hope this'll be fixed soon.
+I checked on InDesign 19.2. and 21.0
+
+## Theme color variables in CSS
+
+UXP Theme color variables automatically detect interface brightness.
+When a user change brightness, it changes colours, but only it works in Photoshop.
+Premiere Pro and InDesign don't support it.
+[Making your Plugin Theme-aware](https://developer.adobe.com/photoshop/uxp/2022/guides/theme-awareness/)
+
+However, there are some bugs on the theme colour, so I recommend to develop CSS colour variables by yourself in any Application.
 
 ## References
 

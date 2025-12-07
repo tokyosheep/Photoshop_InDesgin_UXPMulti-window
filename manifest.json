@@ -10,6 +10,10 @@
     {
       "app": "ID",
       "minVersion": "19.0.0"
+    },
+    {
+       "app": "premierepro",
+      "minVersion": "25.6"
     }
   ],
   "main": "index.html",
